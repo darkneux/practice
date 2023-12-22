@@ -1,0 +1,26 @@
+# .gitignore
+
+# Virtual environment
+envir/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database files
+db.sqlite3
+
+#Secret Key
+.env
+
+# Local development settings
+practice/settings/local.py
+
+# IDE files
+.vscode/
+.idea/
+*.pyc
+*.pyo
+*.pyd
