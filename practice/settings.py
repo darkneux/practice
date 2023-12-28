@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.postgres',
     'core',
+    'celeryapp',
 ]
 
 MIDDLEWARE = [
@@ -156,6 +157,20 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+
+# settings.py
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+# don't forget the practice #__init__.py file for CELERY
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+
+# Configure Celery to use the Django settings.
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'UTC'
+
+
 
 # LOGGING CONFIGURATION
 LOGGING = {
