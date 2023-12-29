@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.postgres',
     'core',
     'celeryapp',
+    'websocket',
+    'webRTCapp',
 ]
 
 MIDDLEWARE = [
